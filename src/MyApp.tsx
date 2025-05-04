@@ -1,9 +1,13 @@
 import React from "react";
 
+export function label(text: string) {
+  return `Hello, ${text.toUpperCase()}`;
+}
+
 function MyApp() {
   return (
     <div>
-      <h1>Hello, React</h1>
+      <h1>{label("React")}</h1>
     </div>
   );
 }
