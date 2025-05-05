@@ -7,13 +7,3 @@ export type HeadingProps = {
 export function Heading({ name = "React" }: HeadingProps) {
   return <h1>Hello, {name}!</h1>;
 }
-
-function MyApp() {
-  return (
-    <div>
-      <Heading />
-    </div>
-  );
-}
-
-export default MyApp;
