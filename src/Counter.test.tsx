@@ -9,3 +9,10 @@ test("render a label and a counter", () => {
   const counter = screen.getByPlaceholderText("1");
   expect(counter).toBeInTheDocument();
 });
+test("render counter with custom label", () => {
+  render(<Counter label={`Current`} />);
+  const label = screen.getByLabelText("Current");
+  expect(label).toBeInTheDocument();
+  const counter = screen.getByPlaceholderText("1");
+  expect(counter).toBeInTheDocument();
+});
