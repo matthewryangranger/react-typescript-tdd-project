@@ -6,7 +6,7 @@ function App() {
   return (
     <div>
       <Heading />
-      <Counter label={"Current:"} />
+      <Counter displayText={"Current counter:"} />
     </div>
   );
 }

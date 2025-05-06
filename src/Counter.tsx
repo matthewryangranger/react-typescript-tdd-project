@@ -1,14 +1,18 @@
 import React, { Component } from "react";
 
-export type CounterProps = { label?: string };
+export type CounterProps = { displayText?: string };
 
 class Counter extends Component<CounterProps> {
   render() {
-    const { label = "Count" } = this.props;
+    const { displayText = "Count" } = this.props;
     return (
       <div>
-        <label htmlFor="counter">{label}</label>
-        <input type="text" id="counter" placeholder="1"></input>
+        <p>
+          {displayText}{" "}
+          <span id="counter" role="textbox">
+            0
+          </span>
+        </p>
       </div>
     );
   }
